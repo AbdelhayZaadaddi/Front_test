@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Text Management App
+
+This project is a simple text management application built with Next.js. It allows users to upload and manage text content in a browser-based database using `localforage` for storage and `CryptoJS` for encryption. The application supports two user types: Writer and Publisher.
+
+## Features
+
+- **Writer**: Allows users to write, upload, and encrypt text content.
+- **Publisher**: Allows users to view the uploaded and decrypted text content.
+- **State Management**: Uses `zustand` for state management.
+- **Data Synchronization**: Uses `BroadcastChannel` for real-time data synchronization between Writer and Publisher.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```sh
+git clone https://github.com/AbdelhayZaadaddi/Front_test
+```
+
+2. Intall dependencies
+```sh
+npm install
+# or
+yarn install
+```
+
+### Running the Application
+1. Start the development server:
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open your browser and navigate to `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Project Structure
+* `pages/`: Containes the main pages of the application.
 
-## Learn More
+   * `index.js`: The main entry point of the application.
+   * `writer.js`: The Writer page where users can write and upload text.
+   * `publisher.js`: The Publisher page where users can view uploaded text.
 
-To learn more about Next.js, take a look at the following resources:
+* `components/`: Contains reusable components.
+    * `Writer.js`: The writer component.
+    * `Publisher.js`: The Publisher component.
+    * `userStore.js`: The Zunstand store for managing user state.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* `public/fonts/`:  Contains custom fonts used in the application.
+* `styles/`: Contains global styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Deployment
+The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
 
-## Deploy on Vercel
+Check out the Next.js deployment documentation for more details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Libraries and Tools
+* #### Next.js
+* #### localforage
+* #### CryptoJS
+* #### zunstand
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Contributing
+Feedback and contributions are welcome! Please open an issue or submit a pull request.
